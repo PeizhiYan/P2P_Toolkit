@@ -3,8 +3,7 @@ import util
 
 
 # create a socket object
-serversocket = socket.socket(
-	        socket.AF_INET, socket.SOCK_STREAM) 
+serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
 
 # get local machine name
 host = socket.gethostname()                           
