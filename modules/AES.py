@@ -9,10 +9,7 @@ class AES256:
 	def __init__(self, password):
 		self.salt = "this is salt"
 		# generate 256-bit encryption key
-		self.secretKey = hashlib.pbkdf2_hmac('sha256', 
-											password.encode('UTF-8'), 
-											self.salt.encode('UTF-8'),
-											100000)  
+		self.secretKey = hashlib.pbkdf2_hmac('sha256', password.encode('UTF-8'), self.salt.encode('UTF-8'), 100000)  
 
 	def encrypt(self, msg):
 		msg = msg.encode('UTF-8') # convert to buffers of bytes
